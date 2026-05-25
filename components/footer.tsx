@@ -19,7 +19,7 @@ export function Footer() {
             >
               {siteConfig.name}
             </Link>
-            <p className="mt-4 text-[var(--cream-muted)] max-w-md leading-relaxed">
+            <p className="mt-4 text-white/60 max-w-md leading-relaxed">
               An intimate Mediterranean escape in the heart of Fitzrovia. Handcrafted
               seafood, fine wines, and unforgettable evenings since 2012.
             </p>
@@ -29,7 +29,7 @@ export function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="w-10 h-10 rounded-full border border-[var(--brand)]/30 flex items-center justify-center text-[var(--cream-muted)] hover:border-[var(--brand)] hover:text-[var(--brand)] transition-all duration-300"
+                  className="w-10 h-10 rounded-full border border-[var(--brand)]/30 flex items-center justify-center text-white/60 hover:border-[var(--brand)] hover:text-[var(--brand)] transition-all duration-300"
                 >
                   <span className="text-xs">{social.charAt(0)}</span>
                 </a>
@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[var(--text-secondary)] uppercase tracking-wider text-sm mb-6">
+            <h4 className="text-white/80 uppercase tracking-wider text-sm mb-6">
               Explore
             </h4>
             <ul className="space-y-4">
@@ -47,7 +47,7 @@ export function Footer() {
                 <li key={link.link}>
                   <Link
                     href={link.link}
-                    className="text-[var(--cream-muted)] hover:text-[var(--brand)] transition-colors"
+                    className="text-white/60 hover:text-[var(--brand)] transition-colors"
                   >
                     {link.title}
                   </Link>
@@ -56,7 +56,7 @@ export function Footer() {
               <li>
                 <a
                   href="#book"
-                  className="text-[var(--cream-muted)] hover:text-[var(--brand)] transition-colors"
+                  className="text-white/60 hover:text-[var(--brand)] transition-colors"
                 >
                   Reservations
                 </a>
@@ -66,10 +66,10 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[var(--text-secondary)] uppercase tracking-wider text-sm mb-6">
+            <h4 className="text-white/80 uppercase tracking-wider text-sm mb-6">
               Visit Us
             </h4>
-            <ul className="space-y-4 text-[var(--cream-muted)]">
+            <ul className="space-y-4 text-white/60">
               <li>
                 <p>12 Charlotte Street</p>
                 <p>Fitzrovia, London</p>
@@ -97,19 +97,19 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[var(--brand)]/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[var(--cream-muted)] text-sm">
+          <p className="text-white/60 text-sm">
             © {currentYear} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a
               href="#"
-              className="text-[var(--cream-muted)] hover:text-[var(--brand)] transition-colors"
+              className="text-white/60 hover:text-[var(--brand)] transition-colors"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-[var(--cream-muted)] hover:text-[var(--brand)] transition-colors"
+              className="text-white/60 hover:text-[var(--brand)] transition-colors"
             >
               Terms of Service
             </a>

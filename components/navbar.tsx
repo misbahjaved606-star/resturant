@@ -37,10 +37,10 @@ export function NavBar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative z-50">
-            <h1 className="font-serif text-2xl md:text-3xl text-amber-400 tracking-wider">
+            <h1 className="font-serif text-2xl md:text-3xl text-white tracking-wider">
               BENNIE
             </h1>
-            <p className="text-[10px] md:text-xs text-amber-400/80 tracking-[0.3em] uppercase mt-1">
+            <p className="text-[10px] md:text-xs text-white/80 tracking-[0.3em] uppercase mt-1">
               Restaurant & Bar
             </p>
           </Link>
@@ -51,7 +51,7 @@ export function NavBar() {
               <Link
                 key={link.title}
                 href={link.link}
-                className="text-sm text-white/80 hover:text-amber-400 transition-colors tracking-wide uppercase"
+                className="text-sm text-white/80 hover:text-white transition-colors tracking-wide uppercase"
               >
                 {link.title}
               </Link>
@@ -62,7 +62,7 @@ export function NavBar() {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="bg-amber-500 hover:bg-amber-600 text-black px-6 py-2.5 text-sm font-medium tracking-wide transition-colors"
+              className="bg-white hover:bg-amber-600 text-[#1a1815] px-6 py-2.5 text-sm font-medium tracking-wide transition-colors"
             >
               Book Now
             </Link>
@@ -91,7 +91,7 @@ export function NavBar() {
               key={link.title}
               href={link.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl text-white/80 hover:text-amber-400 transition-colors tracking-wide uppercase"
+              className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
             >
               {link.title}
             </Link>
@@ -99,7 +99,7 @@ export function NavBar() {
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-amber-500 hover:bg-amber-600 text-black px-8 py-3 text-lg font-medium tracking-wide transition-colors mt-4"
+            className="bg-white hover:bg-amber-600 text-[#1a1815] px-8 py-3 text-lg font-medium tracking-wide transition-colors mt-4"
           >
             Book Now
           </Link>
@@ -110,7 +110,7 @@ export function NavBar() {
       <div className="fixed bottom-6 left-4 right-4 z-50 lg:hidden">
         <Link
           href="/contact"
-          className="block w-full bg-amber-500 hover:bg-amber-600 text-black py-4 text-center font-medium tracking-wide transition-colors"
+          className="block w-full bg-white hover:bg-amber-600 text-[#1a1815] py-4 text-center font-medium tracking-wide transition-colors"
         >
           Reserve Your Table
         </Link>

@@ -64,7 +64,7 @@ export function PrivateDining() {
               {EVENT_TYPES.map((event) => (
                 <div
                   key={event.title}
-                  className="p-6 rounded-xl bg-white border border-[var(--brand)]/10 hover:border-[var(--brand)]/30 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-[#c9a962] border border-[var(--brand)]/10 hover:border-[var(--brand)]/30 transition-all duration-300 group"
                 >
                   <h4 className="font-serif text-lg text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand)] transition-colors">
                     {event.title}

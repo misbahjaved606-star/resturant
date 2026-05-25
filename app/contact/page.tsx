@@ -50,7 +50,7 @@ export default function ContactPage() {
             <motion.div 
               whileHover={{ scale: 1.02, y: -4 }}
               transition={{ duration: 0.3 }}
-              className="flex items-start gap-4 p-4 md:p-6 rounded-2xl bg-white border border-[#c9a962]/20 hover:shadow-xl hover:border-[#c9a962]/40 cursor-pointer group"
+              className="flex items-start gap-4 p-4 md:p-6 rounded-2xl bg-[#c9a962] border border-[#c9a962]/20 hover:shadow-xl hover:border-[#c9a962]/40 cursor-pointer group"
             >
               <motion.div 
                 whileHover={{ rotate: 5, scale: 1.1 }}
