@@ -40,7 +40,7 @@ export function Hero() {
           </p>
 
           {/* Main Heading */}
-          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-[var(--cream)] leading-[0.95] mb-8 animate-fade-in-up delay-100">
+          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-amber-100 leading-[0.95] mb-8 animate-fade-in-up delay-100">
             An Intimate
             <br />
             <span className="italic text-[var(--brand)]">Escape</span>
@@ -49,7 +49,7 @@ export function Hero() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-[var(--cream-muted)] leading-relaxed mb-12 max-w-xl animate-fade-in-up delay-200">
+          <p className="text-lg md:text-xl text-amber-200/70 leading-relaxed mb-12 max-w-xl animate-fade-in-up delay-200">
             Handcrafted seafood, fine wines, and unforgettable evenings in the
             heart of London. Where Mediterranean tradition meets modern elegance.
           </p>
@@ -64,7 +64,7 @@ export function Hero() {
             </a>
             <a
               href="/menu"
-              className="inline-flex items-center justify-center px-10 py-4 border border-[var(--cream-muted)]/30 text-[var(--cream)] font-medium tracking-wider uppercase text-sm rounded-full hover:border-[var(--brand)] hover:text-[var(--brand)] transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-4 border border-[var(--cream-muted)]/30 text-amber-100 font-medium tracking-wider uppercase text-sm rounded-full hover:border-[var(--brand)] hover:text-[var(--brand)] transition-all duration-300"
             >
               View Menu
             </a>
@@ -74,14 +74,14 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-8 mt-16 pt-8 border-t border-[var(--brand)]/20 animate-fade-in-up delay-400">
             <div className="flex items-center gap-2">
               <span className="text-[var(--brand)] text-lg">★</span>
-              <span className="text-[var(--cream-muted)] text-sm">4.8 Google Reviews</span>
+              <span className="text-amber-200/70 text-sm">4.8 Google Reviews</span>
             </div>
             <div className="h-4 w-px bg-[var(--brand)]/30" />
-            <span className="text-[var(--cream-muted)] text-sm">
+            <span className="text-amber-200/70 text-sm">
               Open Tue–Sun · 12pm–11pm
             </span>
             <div className="h-4 w-px bg-[var(--brand)]/30" />
-            <span className="text-[var(--cream-muted)] text-sm">Dog Friendly</span>
+            <span className="text-amber-200/70 text-sm">Dog Friendly</span>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@ export function Hero() {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--cream-muted)] hover:text-[var(--brand)] transition-colors cursor-pointer group"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-amber-200/70 hover:text-[var(--brand)] transition-colors cursor-pointer group"
         aria-label="Scroll down"
       >
         <span className="text-xs tracking-widest uppercase">Discover</span>

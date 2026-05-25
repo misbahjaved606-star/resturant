@@ -23,7 +23,7 @@ const EVENT_TYPES = [
 
 export function PrivateDining() {
   return (
-    <section className="py-32 bg-black">
+    <section className="py-32 bg-[#fdfcfa]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
@@ -48,7 +48,7 @@ export function PrivateDining() {
             <p className="text-[var(--brand)] tracking-[0.3em] uppercase text-sm mb-4">
               Exclusive Hire
             </p>
-            <h2 className="font-serif text-5xl md:text-6xl text-[var(--cream)] mb-6">
+            <h2 className="font-serif text-5xl md:text-6xl text-[var(--text-primary)] mb-6">
               Private Dining
               <br />
               <span className="italic text-[var(--brand)]">& Events</span>
@@ -64,9 +64,9 @@ export function PrivateDining() {
               {EVENT_TYPES.map((event) => (
                 <div
                   key={event.title}
-                  className="p-6 rounded-xl bg-[var(--surface)] border border-[var(--brand)]/10 hover:border-[var(--brand)]/30 transition-all duration-300 group"
+                  className="p-6 rounded-xl bg-white border border-[var(--brand)]/10 hover:border-[var(--brand)]/30 transition-all duration-300 group"
                 >
-                  <h4 className="font-serif text-lg text-[var(--cream)] mb-2 group-hover:text-[var(--brand)] transition-colors">
+                  <h4 className="font-serif text-lg text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand)] transition-colors">
                     {event.title}
                   </h4>
                   <p className="text-[var(--cream-muted)] text-sm">

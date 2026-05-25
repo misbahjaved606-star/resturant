@@ -15,7 +15,7 @@ export function SocialProof() {
   ];
 
   return (
-    <section className="py-20 bg-[var(--surface)]">
+    <section className="py-20 bg-[#f8f6f3]">
       <div className="container">
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
@@ -44,7 +44,7 @@ export function SocialProof() {
             {pressLogos.map((publication) => (
               <span
                 key={publication}
-                className="text-[var(--cream)]/40 hover:text-[var(--brand)] transition-colors duration-300 font-serif text-xl md:text-2xl italic"
+                className="text-[var(--text-primary)]/40 hover:text-[var(--brand)] transition-colors duration-300 font-serif text-xl md:text-2xl italic"
               >
                 {publication}
               </span>

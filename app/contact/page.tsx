@@ -1,96 +1,158 @@
 "use client";
 
-import { Container } from "@/components/container";
-import { siteConfig } from "@/lib/site-config";
-import { Footer } from "@/components/footer";
-import { KleapForm } from "@/components/kleap-form";
+import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
+import { KleapForm } from "@/components/kleap-form";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+};
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-black pt-32">
-      <Container>
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[var(--accent)] font-medium tracking-widest uppercase text-sm mb-4 block">
-            Bennie Restaurant & Bar
-          </span>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
-            Get in <span className="italic text-[var(--accent)]">Touch</span>
-          </h1>
-          <p className="text-lg text-white/60">
-            We'd love to hear from you. Whether you have a question, 
-            want to make a reservation, or plan a private event.
-          </p>
-        </div>
+    <div className="bg-[#faf8f5] min-h-screen">
+      {/* Hero */}
+      <section className="relative h-64 flex items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-[#faf8f5]" />
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920')] bg-cover bg-center opacity-30"
+        />
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative z-10 text-center"
+        >
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-amber-100 mb-4">Get in Touch</h1>
+          <p className="text-amber-200/70 text-lg">We'd love to hear from you</p>
+        </motion.div>
+      </section>
 
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Contact Info */}
-          <div>
-            <h2 className="text-2xl font-serif font-bold mb-8">Contact Information</h2>
-            
-            <div className="space-y-6 mb-12">
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-[var(--accent)]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">Location</h3>
-                  <p className="text-white/60">42 Newman Street<br />Fitzrovia, London<br />W1T 1QD</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-[var(--accent)]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">Phone</h3>
-                  <a href="tel:+442071234567" className="text-[var(--accent)] hover:underline">+44 20 7123 4567</a>
-                  <p className="text-sm text-white/50 mt-1">For reservations and enquiries</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-[var(--accent)]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">Email</h3>
-                  <a href="mailto:hello@bennie.co.uk" className="text-[var(--accent)] hover:underline">hello@bennie.co.uk</a>
-                  <p className="text-sm text-white/50 mt-1">We respond within 24 hours</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5">
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                  <Clock className="w-6 h-6 text-[var(--accent)]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">Opening Hours</h3>
-                  <div className="text-white/60 text-sm space-y-1">
-                    <p>Monday - Thursday: 12pm - 10pm</p>
-                    <p>Friday - Saturday: 12pm - 11pm</p>
-                    <p>Sunday: 12pm - 9pm</p>
-                  </div>
-                </div>
-              </div>
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-4 md:space-y-6"
+          >
+            <div className="mb-6">
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#1a1815] mb-3">Contact Information</h2>
+              <p className="text-[#1a1815]/60 text-sm md:text-base">Visit us, call us, or send us a message. We look forward to welcoming you.</p>
             </div>
+
+            {/* Location Card */}
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-start gap-4 p-4 md:p-6 rounded-2xl bg-white border border-[#c9a962]/20 hover:shadow-xl hover:border-[#c9a962]/40 cursor-pointer group"
+            >
+              <motion.div 
+                whileHover={{ rotate: 5, scale: 1.1 }}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#c9a962]/10 flex items-center justify-center shrink-0 group-hover:bg-[#c9a962]/20 transition-colors"
+              >
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#c9a962]" />
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-[#1a1815] mb-1">Location</h3>
+                <p className="text-[#1a1815]/60 text-sm md:text-base">42 Newman Street<br />Fitzrovia, London<br />W1T 1QD</p>
+              </div>
+            </motion.div>
+
+            {/* Phone Card */}
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-start gap-4 p-4 md:p-6 rounded-2xl bg-white border border-[#c9a962]/20 hover:shadow-xl hover:border-[#c9a962]/40 cursor-pointer group"
+            >
+              <motion.div 
+                whileHover={{ rotate: -5, scale: 1.1 }}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#c9a962]/10 flex items-center justify-center shrink-0 group-hover:bg-[#c9a962]/20 transition-colors"
+              >
+                <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#c9a962]" />
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-[#1a1815] mb-1">Phone</h3>
+                <a href="tel:+442071234567" className="text-[#c9a962] hover:underline text-sm md:text-base">+44 20 7123 4567</a>
+                <p className="text-xs md:text-sm text-[#1a1815]/50 mt-1">For reservations and enquiries</p>
+              </div>
+            </motion.div>
+
+            {/* Email Card */}
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-start gap-4 p-4 md:p-6 rounded-2xl bg-white border border-[#c9a962]/20 hover:shadow-xl hover:border-[#c9a962]/40 cursor-pointer group"
+            >
+              <motion.div 
+                whileHover={{ scale: 1.1 }}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#c9a962]/10 flex items-center justify-center shrink-0 group-hover:bg-[#c9a962]/20 transition-colors"
+              >
+                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#c9a962]" />
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-[#1a1815] mb-1">Email</h3>
+                <a href="mailto:hello@bennie.co.uk" className="text-[#c9a962] hover:underline text-sm md:text-base">hello@bennie.co.uk</a>
+                <p className="text-xs md:text-sm text-[#1a1815]/50 mt-1">We respond within 24 hours</p>
+              </div>
+            </motion.div>
+
+            {/* Hours Card */}
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-start gap-4 p-4 md:p-6 rounded-2xl bg-white border border-[#c9a962]/20 hover:shadow-xl hover:border-[#c9a962]/40 cursor-pointer group"
+            >
+              <motion.div 
+                whileHover={{ rotate: 10, scale: 1.1 }}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#c9a962]/10 flex items-center justify-center shrink-0 group-hover:bg-[#c9a962]/20 transition-colors"
+              >
+                <Clock className="w-5 h-5 md:w-6 md:h-6 text-[#c9a962]" />
+              </motion.div>
+              <div>
+                <h3 className="font-semibold text-[#1a1815] mb-1">Opening Hours</h3>
+                <div className="text-[#1a1815]/60 text-xs md:text-sm space-y-1">
+                  <p>Monday - Thursday: 12pm - 10pm</p>
+                  <p>Friday - Saturday: 12pm - 11pm</p>
+                  <p>Sunday: 12pm - 9pm</p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Social */}
-            <div>
-              <h3 className="font-semibold text-white mb-4">Follow Us</h3>
-              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-[var(--accent)]/30 transition-colors">
-                <Instagram className="w-5 h-5 text-[var(--accent)]" />
-                <span className="text-white">@bennierestaurant</span>
-              </a>
-            </div>
-          </div>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.5 }} className="pt-2">
+              <h3 className="font-semibold text-[#1a1815] mb-4">Follow Us</h3>
+              <motion.a 
+                href="https://instagram.com/bennierestaurant" 
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#c9a962] text-white hover:bg-[#1a1815] transition-colors text-sm"
+              >
+                <Instagram className="w-4 h-4" />
+                <span>@bennierestaurant</span>
+              </motion.a>
+            </motion.div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div>
-            <h2 className="text-2xl font-serif font-bold mb-8">Send Us a Message</h2>
-            <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-[#1a1815] mb-6 md:mb-8">Send Us a Message</h2>
+            <motion.div 
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.3 }}
+              className="p-6 md:p-8 rounded-3xl bg-white border border-[#c9a962]/20 shadow-lg hover:shadow-xl transition-shadow"
+            >
               <KleapForm
                 formId="contact"
                 title="Contact Bennie"
@@ -99,29 +161,37 @@ export default function ContactPage() {
                   { name: "email", label: "Email", type: "email", required: true },
                   { name: "phone", label: "Phone", type: "tel" },
                   { name: "subject", label: "Subject", type: "select", options: ["General Enquiry", "Reservations", "Private Hire", "Feedback", "Other"], required: true },
-                  { name: "date", label: "Preferred Date (if event)", type: "text" },
-                  { name: "guests", label: "Number of Guests (if event)", type: "text" },
                   { name: "message", label: "Message", type: "textarea", required: true }
                 ]}
                 submitText="Send Message"
                 successMessage="Thank you for your message! We'll be in touch within 24 hours."
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
 
-        {/* Map Placeholder */}
-        <div className="mb-20 rounded-3xl overflow-hidden h-80 bg-[var(--surface)] flex items-center justify-center">
-          <div className="text-center">
-            <MapPin className="w-12 h-12 text-[var(--accent)] mx-auto mb-4" />
-            <p className="text-white/60">42 Newman Street, Fitzrovia, London W1T 1QD</p>
-            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center mt-4 text-[var(--accent)] hover:underline">
+        {/* Map */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-12 md:mt-20 rounded-3xl overflow-hidden h-64 md:h-80 bg-[#f5f0e8] border border-[#c9a962]/20 flex items-center justify-center"
+        >
+          <div className="text-center px-4">
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <MapPin className="w-10 h-10 md:w-12 md:h-12 text-[#c9a962] mx-auto mb-4" />
+            </motion.div>
+            <p className="text-[#1a1815]/60 text-sm md:text-base mb-2">42 Newman Street, Fitzrovia, London W1T 1QD</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center mt-4 text-[#c9a962] hover:underline text-sm md:text-base">
               Open in Google Maps
             </a>
           </div>
-        </div>
-      </Container>
-      <Footer />
-    </main>
+        </motion.div>
+      </div>
+    </div>
   );
 }

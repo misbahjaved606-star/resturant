@@ -41,14 +41,14 @@ const EXPERIENCES = [
 
 export function Experience() {
   return (
-    <section className="py-32 bg-[var(--surface-elevated)]">
+    <section className="py-32 bg-white">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
           <p className="text-[var(--brand)] tracking-[0.3em] uppercase text-sm mb-4">
             More Than Dining
           </p>
-          <h2 className="font-serif text-5xl md:text-6xl text-[var(--cream)] mb-6">
+          <h2 className="font-serif text-5xl md:text-6xl text-[var(--text-primary)] mb-6">
             Every Visit Is
             <br />
             <span className="italic text-[var(--brand)]">An Experience</span>
@@ -69,7 +69,7 @@ export function Experience() {
               <span className="text-4xl text-[var(--brand)] mb-6 block group-hover:scale-110 transition-transform duration-300">
                 {exp.icon}
               </span>
-              <h3 className="font-serif text-2xl text-[var(--cream)] mb-4 group-hover:text-[var(--brand)] transition-colors duration-300">
+              <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-4 group-hover:text-[var(--brand)] transition-colors duration-300">
                 {exp.title}
               </h3>
               <p className="text-[var(--cream-muted)] leading-relaxed">

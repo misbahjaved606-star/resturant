@@ -7,7 +7,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black pt-20 pb-8 border-t border-[var(--brand)]/10">
+    <footer className="bg-[#1a1815] pt-20 pb-8 border-t border-[var(--brand)]/10">
       <div className="container">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -15,7 +15,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="font-serif text-4xl text-[var(--cream)] hover:text-[var(--brand)] transition-colors"
+              className="font-serif text-4xl text-[var(--brand)] hover:text-[var(--brand-dark)] transition-colors"
             >
               {siteConfig.name}
             </Link>
@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[var(--cream)] uppercase tracking-wider text-sm mb-6">
+            <h4 className="text-[var(--text-secondary)] uppercase tracking-wider text-sm mb-6">
               Explore
             </h4>
             <ul className="space-y-4">
@@ -66,7 +66,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[var(--cream)] uppercase tracking-wider text-sm mb-6">
+            <h4 className="text-[var(--text-secondary)] uppercase tracking-wider text-sm mb-6">
               Visit Us
             </h4>
             <ul className="space-y-4 text-[var(--cream-muted)]">

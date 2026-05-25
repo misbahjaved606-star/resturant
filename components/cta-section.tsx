@@ -5,7 +5,7 @@ import { KleapForm } from "@/components/kleap-form";
 
 export function CTASection() {
   return (
-    <section id="book" className="py-32 bg-black relative overflow-hidden">
+    <section id="book" className="py-32 bg-[#1a1815] relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand)] rounded-full blur-3xl" />
@@ -19,7 +19,7 @@ export function CTASection() {
             <p className="text-[var(--brand)] text-sm tracking-[0.3em] uppercase mb-6">
               Reservations
             </p>
-            <h2 className="font-serif text-5xl md:text-7xl text-[var(--cream)] mb-6 leading-tight">
+            <h2 className="font-serif text-5xl md:text-7xl text-[var(--text-primary)] mb-6 leading-tight">
               Join Us for an
               <br />
               <span className="text-[var(--brand)]">Unforgettable</span> Evening

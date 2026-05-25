@@ -30,14 +30,14 @@ export function NavBar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           isScrolled
-            ? "bg-black/95 backdrop-blur-md py-4"
-            : "bg-transparent py-6"
+            ? "bg-[#1a1815]/95 backdrop-blur-md py-4 shadow-lg"
+            : "bg-[#1a1815]/80 backdrop-blur-sm py-5"
         )}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative z-50">
-            <h1 className="font-serif text-2xl md:text-3xl text-white tracking-wider">
+            <h1 className="font-serif text-2xl md:text-3xl text-amber-400 tracking-wider">
               BENNIE
             </h1>
             <p className="text-[10px] md:text-xs text-amber-400/80 tracking-[0.3em] uppercase mt-1">
