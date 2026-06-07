@@ -7,7 +7,7 @@
 
 const TOOL_PROXY_URL = "http://localhost:3000/api/tool-proxy";
 const APP_ID = 22326;
-const USER_ID = "e48d1c8c-7576-412a-84aa-ed383c54c67c";
+const USER_ID = "5ce96e05-ede4-424d-9746-236e244e04ed";
 
 interface ToolCallResult {
   success: boolean;

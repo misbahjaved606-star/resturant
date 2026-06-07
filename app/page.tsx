@@ -1,23 +1,23 @@
-import { Hero } from "@/components/hero";
-import { SocialProof } from "@/components/social-proof";
-import { SignatureDishes } from "@/components/signature-dishes";
-import { Experience } from "@/components/experience";
-import { PrivateDining } from "@/components/private-dining";
-import { Testimonials } from "@/components/testimonials";
-import { CTASection } from "@/components/cta-section";
-import { Footer } from "@/components/footer";
+import { Hero } from "@/components/sections/hero";
+import { Categories } from "@/components/sections/categories";
+import { FeaturedProducts } from "@/components/sections/featured-products";
+import { WhyChooseUs } from "@/components/sections/why-choose-us";
+import { About } from "@/components/sections/about";
+import { Contact } from "@/components/sections/contact";
+import { FloatingWhatsApp } from "@/components/sections/floating-whatsapp";
+import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#faf8f5] min-h-screen">
+    <>
       <Hero />
-      <SocialProof />
-      <SignatureDishes />
-      <Experience />
-      <PrivateDining />
-      <Testimonials />
-      <CTASection />
+      <Categories />
+      <FeaturedProducts />
+      <WhyChooseUs />
+      <About />
+      <Contact />
+      <FloatingWhatsApp />
       <Footer />
-    </main>
+    </>
   );
 }

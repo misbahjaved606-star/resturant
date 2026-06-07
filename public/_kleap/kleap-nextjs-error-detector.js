@@ -84,9 +84,7 @@
           type: "build-error",
           message: title || "Build error detected",
           details: body,
-          fullText: `${title}
-
-${body}`.trim(),
+          fullText: `${title}\n\n${body}`.trim(),
           source: "nextjs-dialog",
         };
       }
@@ -135,8 +133,7 @@ ${body}`.trim(),
             }
 
             const lines = errorText
-              .split("
-")
+              .split("\n")
               .map((l) => l.trim())
               .filter(Boolean);
             return {
@@ -209,8 +206,7 @@ ${body}`.trim(),
         if (hasErrorPattern) {
           // Extract first meaningful line as message
           const lines = text
-            .split("
-")
+            .split("\n")
             .map((l) => l.trim())
             .filter(Boolean);
           let message = "Build error detected";
