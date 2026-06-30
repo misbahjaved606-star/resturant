@@ -1,196 +1,89 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, MapPin, Store, MessageCircle, Clock, Mail } from "lucide-react";
+import { Mail, Phone, Linkedin, MessageCircle } from "lucide-react";
 import { Container } from "@/components/container";
-import { Button } from "@/components/ui/button";
 import { KleapForm } from "@/components/kleap-form";
+
+const WHATSAPP_URL = "https://wa.me/923408575542";
 
 export function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-20 md:py-28 bg-gradient-to-b from-stone-50 to-white"
-    >
-      <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-14"
-        >
-          <p className="text-amber-600 text-sm font-semibold tracking-widest uppercase mb-3">
-            Get in Touch
-          </p>
-          <h2 className="text-3xl md:text-5xl font-bold text-stone-900 tracking-tight">
-            Visit Us or{" "}
-            <span className="bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-transparent">
-              Say Hello
-            </span>
-          </h2>
-          <p className="mt-4 text-stone-600 text-lg">
-            We'd love to help you find the perfect outfit. Drop by, call, or
-            send a message.
-          </p>
+    <section id="contact" className="py-20 md:py-28 bg-[#0a0f1e] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+      <Container className="relative z-10">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-amber-400/20 mb-4">
+            <Mail className="w-4 h-4 text-amber-400" />
+            <span className="text-sm text-amber-100/90 font-medium">Get In Touch</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">Let&apos;s Build Your AI Chatbot</h2>
+          <p className="mt-4 text-white/60 max-w-2xl mx-auto">Ready to automate your real estate conversations? Book a free consultation today.</p>
         </motion.div>
-
-        <div className="grid lg:grid-cols-5 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-4"
-          >
-            <div className="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-md transition">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-800/10 flex items-center justify-center flex-shrink-0">
-                  <Store className="w-6 h-6 text-emerald-800" />
+        <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="lg:col-span-2 space-y-6">
+            <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
+              <h3 className="text-white font-semibold text-lg mb-4">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <div className="text-white/50 text-xs">Phone / WhatsApp</div>
+                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white text-sm hover:text-amber-400 transition-colors">+92 340 8575542</a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold">
-                    Store Name
-                  </p>
-                  <p className="text-stone-900 font-bold mt-1">
-                    Lahore Clothes &amp; Branded Cut Piece
-                  </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <div className="text-white/50 text-xs">Email</div>
+                    <a href="mailto:misbahjaved@email.com" className="text-white text-sm hover:text-amber-400 transition-colors">misbahjaved@email.com</a>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-md transition">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-800/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-emerald-800" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+923465617880"
-                    className="text-stone-900 font-bold mt-1 hover:text-emerald-800 transition"
-                  >
-                    +92 346 5617880
-                  </a>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center">
+                    <Linkedin className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <div className="text-white/50 text-xs">LinkedIn</div>
+                    <a href="https://www.linkedin.com/in/misbah-javed-70372b397/" target="_blank" rel="noopener noreferrer" className="text-white text-sm hover:text-amber-400 transition-colors">Misbah Javed</a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm hover:shadow-md transition">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-800/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-emerald-800" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold">
-                    Address
-                  </p>
-                  <p className="text-stone-900 font-medium mt-1 leading-relaxed">
-                    Office No. 103, Habib Plaza, Phase 4B, Ghauri Town,
-                    Islamabad, Pakistan
-                  </p>
-                </div>
+              <div className="flex gap-3 mt-6">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-center text-emerald-400 hover:bg-emerald-500/20 transition-all">
+                  <MessageCircle className="w-5 h-5" />
+                </a>
+                <a href="https://www.linkedin.com/in/misbah-javed-70372b397/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center text-blue-400 hover:bg-blue-500/20 transition-all">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="mailto:misbahjaved@email.com" className="w-11 h-11 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400 hover:bg-amber-400/20 transition-all">
+                  <Mail className="w-5 h-5" />
+                </a>
               </div>
             </div>
-
-            <div className="p-6 rounded-2xl bg-emerald-800 text-white shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-stone-900" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-emerald-200 font-semibold">
-                    Store Hours
-                  </p>
-                  <p className="font-medium mt-1">Mon – Sat: 10:00 AM – 9:00 PM</p>
-                  <p className="text-emerald-200 text-sm">Sunday: 12:00 PM – 8:00 PM</p>
-                </div>
-              </div>
-            </div>
-
-            <Button
-              asChild
-              size="lg"
-              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-full h-14 text-base"
-            >
-              <a
-                href="https://wa.me/923465617880"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Chat on WhatsApp
-              </a>
-            </Button>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-3"
-          >
-            <div className="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 md:p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-amber-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-stone-900">
-                    Send us a message
-                  </h3>
-                  <p className="text-sm text-stone-500">
-                    We'll respond as soon as possible.
-                  </p>
-                </div>
-              </div>
+          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="lg:col-span-3">
+            <div className="p-6 md:p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
               <KleapForm
                 formId="contact"
-                title="Contact Form - Lahore Clothes"
+                title="Contact Misbah Javed"
                 fields={[
-                  {
-                    name: "name",
-                    label: "Your Name",
-                    type: "text",
-                    required: true,
-                  },
-                  {
-                    name: "phone",
-                    label: "Phone Number",
-                    type: "tel",
-                    required: true,
-                  },
-                  {
-                    name: "email",
-                    label: "Email (optional)",
-                    type: "email",
-                  },
-                  {
-                    name: "interest",
-                    label: "What are you looking for?",
-                    type: "select",
-                    options: [
-                      "Men's Collection",
-                      "Women's Collection",
-                      "Branded Cut Pieces",
-                      "New Arrivals",
-                      "Other",
-                    ],
-                  },
-                  {
-                    name: "message",
-                    label: "Your Message",
-                    type: "textarea",
-                    required: true,
-                  },
+                  { name: "name", label: "Full Name", type: "text", required: true },
+                  { name: "email", label: "Email Address", type: "email", required: true },
+                  { name: "phone", label: "Phone Number", type: "tel", required: true },
+                  { name: "message", label: "Message", type: "textarea", required: true },
                 ]}
                 submitText="Send Message"
-                successMessage="Thank you! We'll get back to you shortly."
+                successMessage="Thank you! I'll get back to you within 24 hours."
               />
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 font-medium hover:bg-emerald-500/20 transition-all">
+                <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
+              </a>
             </div>
           </motion.div>
         </div>

@@ -1,139 +1,67 @@
 "use client";
 
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-  Phone,
-  MapPin,
-  Mail,
-} from "lucide-react";
+import { MessageCircle, Linkedin, Mail, Bot } from "lucide-react";
 import { Container } from "@/components/container";
-import { Logo } from "@/components/Logo";
 
-const socials = [
-  { icon: Facebook, label: "Facebook", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Youtube, label: "YouTube", href: "#" },
+const WHATSAPP_URL = "https://wa.me/923408575542";
+
+const links = [
+  { title: "Home", link: "#home" },
+  { title: "About", link: "#about" },
+  { title: "Services", link: "#services" },
+  { title: "Portfolio", link: "#portfolio" },
+  { title: "FAQ", link: "#faq" },
+  { title: "Contact", link: "#contact" },
+];
+
+const legal = [
+  { title: "Privacy Policy", link: "#" },
+  { title: "Terms & Conditions", link: "#" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-stone-900 text-stone-300 pt-16 pb-8">
+    <footer className="bg-[#060a14] border-t border-white/5 pt-16 pb-8">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          <div className="lg:col-span-1">
-            <Logo />
-            <p className="mt-4 text-stone-400 text-sm leading-relaxed">
-              Premium branded cut pieces and quality Pakistani clothing for
-              men and women in Islamabad.
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
+                <Bot className="w-5 h-5 text-[#0a0f1e]" />
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-lg">Misbah Javed</h3>
+                <p className="text-amber-400 text-xs">Real Estate AI Chatbot Specialist</p>
+              </div>
+            </div>
+            <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+              Helping real estate agencies automate customer conversations, capture qualified leads, and grow with intelligent AI chatbots.
             </p>
-            <div className="flex items-center gap-3 mt-5">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-amber-500 hover:text-stone-900 flex items-center justify-center transition-all"
-                >
-                  <s.icon className="w-4 h-4" />
-                </a>
-              ))}
+            <div className="flex gap-3 mt-6">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-emerald-400 hover:border-emerald-400/30 transition-all"><MessageCircle className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/in/misbah-javed-70372b397/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-400/30 transition-all"><Linkedin className="w-4 h-4" /></a>
+              <a href="mailto:misbahjaved@email.com" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-amber-400 hover:border-amber-400/30 transition-all"><Mail className="w-4 h-4" /></a>
             </div>
           </div>
-
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
-              Quick Links
-            </h4>
-            <ul className="space-y-3 text-sm">
-              {[
-                ["Home", "#"],
-                ["Categories", "#categories"],
-                ["Products", "#products"],
-                ["Why Choose Us", "#about"],
-                ["Contact", "#contact"],
-              ].map(([label, href]) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    className="text-stone-400 hover:text-amber-400 transition"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {links.map((l) => (<li key={l.title}><a href={l.link} className="text-white/50 text-sm hover:text-amber-400 transition-colors">{l.title}</a></li>))}
             </ul>
           </div>
-
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
-              Collections
-            </h4>
-            <ul className="space-y-3 text-sm">
-              {[
-                "Men's Collection",
-                "Women's Collection",
-                "Branded Cut Pieces",
-                "New Arrivals",
-                "Seasonal Specials",
-              ].map((c) => (
-                <li key={c}>
-                  <a
-                    href="#categories"
-                    className="text-stone-400 hover:text-amber-400 transition"
-                  >
-                    {c}
-                  </a>
-                </li>
-              ))}
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Legal</h4>
+            <ul className="space-y-2">
+              {legal.map((l) => (<li key={l.title}><a href={l.link} className="text-white/50 text-sm hover:text-amber-400 transition-colors">{l.title}</a></li>))}
             </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
-              Contact
-            </h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                <a
-                  href="tel:+923465617880"
-                  className="text-stone-400 hover:text-amber-400 transition"
-                >
-                  +92 346 5617880
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                <span className="text-stone-400">
-                  Office No. 103, Habib Plaza, Phase 4B, Ghauri Town,
-                  Islamabad
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                <a
-                  href="mailto:info@lahoreclothes.pk"
-                  className="text-stone-400 hover:text-amber-400 transition"
-                >
-                  info@lahoreclothes.pk
-                </a>
-              </li>
-            </ul>
+            <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+              <p className="text-white/50 text-xs mb-2">Get in touch</p>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white text-sm font-medium hover:text-amber-400 transition-colors">+92 340 8575542</a>
+            </div>
           </div>
         </div>
-
-        <div className="pt-8 border-t border-stone-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stone-500">
-          <p>
-            © {new Date().getFullYear()} Lahore Clothes &amp; Branded Cut Piece.
-            All rights reserved.
-          </p>
-          <p className="text-stone-600">
-            Crafted with care in Islamabad, Pakistan
-          </p>
+        <div className="pt-8 border-t border-white/5 text-center">
+          <p className="text-white/40 text-sm">© {new Date().getFullYear()} Misbah Javed. All Rights Reserved.</p>
         </div>
       </Container>
     </footer>

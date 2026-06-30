@@ -9,18 +9,21 @@ interface Config {
 }
 
 export const siteConfig: Config = {
-  name: "Lahore Clothes & Branded Cut Piece",
-  tagline: "Premium Branded Cut Pieces & Quality Pakistani Clothing",
+  name: "Misbah Javed",
+  tagline: "Real Estate AI Chatbot Specialist",
   description:
-    "Lahore Clothes & Branded Cut Piece - Trusted clothing store in Islamabad offering quality branded cut pieces, fashion wear, handbags and accessories. Built with Kleap - the AI website builder.",
-  url: process.env.NEXT_PUBLIC_URL || "https://lahore-clothes.kleap.io",
-  ogImage: "https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/22326/images/1780821383465-hero-pakistani-fashion.jpg",
+    "Misbah Javed helps real estate agencies, brokers, and property developers automate customer conversations, capture qualified leads, and grow their business with intelligent AI-powered chatbots available 24/7. Built with Kleap - the AI website builder.",
+  url: process.env.NEXT_PUBLIC_URL || "https://misbah-javed.kleap.io",
+  ogImage: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200",
   showNavbar: true,
   navLinks: [
-    { title: "Home", link: "/" },
-    { title: "Shop", link: "/shop" },
-    { title: "Categories", link: "/categories" },
-    { title: "About", link: "/about" },
-    { title: "Contact", link: "/contact" },
+    { title: "Home", link: "#home" },
+    { title: "About", link: "#about" },
+    { title: "Services", link: "#services" },
+    { title: "Portfolio", link: "#portfolio" },
+    { title: "Process", link: "#process" },
+    { title: "Testimonials", link: "#testimonials" },
+    { title: "FAQ", link: "#faq" },
+    { title: "Contact", link: "#contact" },
   ],
 };
